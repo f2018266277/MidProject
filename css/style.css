@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+body {
+    background-color: #222;
+    background-image: url('../img/bg.png');
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+}
+
+.bars {
+    display: none;
+}
+
+header nav ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+header nav ul label {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 14px;
+}
+
+header nav ul label:hover {
+    color: #f1f1f1;
+    /* background: rgba(0, 0, 0, 0.6); */
+    font-weight: bold;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header img {
+    width: 60px;
+}
+
+main .split {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.container li {
+    line-height: 1.5;
+}
+
+main .heading {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+.card {
+    position: relative;
+    width: 32%;
+    display: inline-block;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.card .img {
+    position: relative;
+    width: 100%;
+}
+
+.card .img img {
+    width: 100%;
+    height: 500px;
+}
+
+.card .label {
+    padding: 10px 14px;
+    font-weight: bold;
+}
+
+.card .about {
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    height: 100px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    padding: 20px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    border: 1px solid #222;
+    background-color: #fff;
+}
+
+.contact input[type="submit"] {
+    background-color: #222;
+    color: #f1f1f1;
+}
+
+.contact input[type="submit"]:hover {
+    background-color: #000;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: #222;
+}
+
+footer a {
+    padding: 10px 12px;
+    background-color: #fff;
+    color: #222;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+.page {
+    display: none;
+}
+
+.home,
+.personalities,
+.cities,
+.tour,
+.contactme {
+    display: none;
+}
+
+#home:checked~.home {
+    display: block;
+}
+
+#personalities:checked~.personalities {
+    display: block;
+}
+
+#cities:checked~.cities {
+    display: block;
+}
+
+#tour:checked~.tour {
+    display: block;
+}
+
+#contactme:checked~.contactme {
+    display: block;
+}
+
+@media only screen and (max-width: 720px) {
+    main .split {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .bars {
+        display: block;
+        color: #fff;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    #navbar:checked+.nav {
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background: #222;
+    }
+
+    .nav ul li {
+        display: block;
+        padding: 10px 14px;
+    }
+
+    .nav ul li:last-child {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        display: block;
+    }
+
+    footer .social {
+        padding-top: 50px;
+    }
+}
